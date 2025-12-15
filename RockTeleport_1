@@ -1,4 +1,8 @@
-repeat task.wait() until game:IsLoaded()
-game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services").PortalService.RF.TeleportToIsland:InvokeServer(
-	"Stonewake's Cross"
-)
+repeat task.wait() until game:IsLoaded() and getrenv()._G.ClientIsReady
+if getgenv().type == "Premium" then
+    script_key = getgenv().script_key
+	loadstring(game:HttpGet("https://lunor.dev/premium-loader"))()
+else
+    script_key = getgenv().script_key
+	loadstring(game:HttpGet("https://lunor.dev/loader"))()
+end
