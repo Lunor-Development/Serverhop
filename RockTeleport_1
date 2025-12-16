@@ -1,4 +1,8 @@
 repeat task.wait() until game:IsLoaded() and getrenv()._G.ClientIsReady
+print("gets here!")
+print(tostring(getgenv().script_key))
+print(tostring(getgenv().type))
+
 if getgenv().type == "Premium" then
     script_key = getgenv().script_key
 	loadstring(game:HttpGet("https://lunor.dev/premium-loader"))()
