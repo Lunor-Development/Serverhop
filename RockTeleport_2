@@ -1,5 +1,3 @@
 repeat task.wait() until game:IsLoaded() and getrenv()._G.ClientIsReady
 if queue_on_teleport then queue_on_teleport("getgenv().type = " ..  tostring(getgenv().type) .. "; getgenv().script_key='".. tostring(getgenv().script_key) .."'; print('test'); loadstring(game:HttpGet('https://raw.githubusercontent.com/Lunor-Development/Serverhop/refs/heads/main/RockTeleport_1'))()") end
-game:GetService("ReplicatedStorage"):WaitForChild("Shared"):WaitForChild("Packages"):WaitForChild("Knit"):WaitForChild("Services").PortalService.RF.TeleportToIsland:InvokeServer(
-    "Forgotten Kingdom"
-)
+print("done")
